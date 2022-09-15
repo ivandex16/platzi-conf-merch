@@ -1,0 +1,25 @@
+[debug] [2022-09-15T16:38:57.899Z] ----------------------------------------------------------------------
+[debug] [2022-09-15T16:38:57.901Z] Command:       C:\Users\DELL\.nvm\versions\node\v18.8.0\bin\node.exe C:\Users\DELL\.nvm\versions\node\v18.8.0\bin\node_modules\firebase-tools\lib\bin\firebase.js login:ci --debug
+[debug] [2022-09-15T16:38:57.902Z] CLI Version:   11.9.0
+[debug] [2022-09-15T16:38:57.902Z] Platform:      win32
+[debug] [2022-09-15T16:38:57.902Z] Node Version:  v18.8.0
+[debug] [2022-09-15T16:38:57.903Z] Time:          Thu Sep 15 2022 11:38:57 GMT-0500 (hora estándar de Colombia)
+[debug] [2022-09-15T16:38:57.903Z] ----------------------------------------------------------------------
+[debug] 
+[warn] !  Authenticating with a `login:ci` token is deprecated and will be removed in a future major version of `firebase-tools`. Instead, use a service account key with `GOOGLE_APPLICATION_CREDENTIALS`: https://cloud.google.com/docs/authentication/getting-started 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=516785874&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-09-15T16:39:13.400Z] >>> [apiv2][query] POST https://accounts.google.com/o/oauth2/token [none]
+[debug] [2022-09-15T16:39:13.415Z] >>> [apiv2][body] POST https://accounts.google.com/o/oauth2/token [omitted]
+[debug] [2022-09-15T16:39:13.964Z] <<< [apiv2][status] POST https://accounts.google.com/o/oauth2/token 200
+[debug] [2022-09-15T16:39:13.965Z] <<< [apiv2][body] POST https://accounts.google.com/o/oauth2/token [omitted]
+[info] 
+[info] +  Success! Use this token to login on a CI server:
+
+1//05cHld1k4NJkeCgYIARAAGAUSNwF-L9IrgcuuGOeGskpDVkyTdwgLCbELsk-kjQKyw6UG_G8uphXi5tVP6OfvWbL9LibsNSN2VZ0
+
+Example: firebase deploy --token "$FIREBASE_TOKEN"
+ 
