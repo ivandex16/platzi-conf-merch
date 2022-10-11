@@ -17,7 +17,7 @@ import {
   InformationElements,
   Anchor,
 } from "./styles";
-import ValidationTextFields from "../../component/TextField";
+//import ValidationTextFields from "../../component/TextField";
 const Information = () => {
   const { state, addToBuyer } = useContext(AppContext);
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
