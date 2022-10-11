@@ -6,10 +6,13 @@ import {
   Span,
   P,
   Image,
-  Button,
+  //Button,
 } from "./styles";
+import Buton from "../Alert"
 
-const Product = ({ product , handleAddToCart}) => {
+const Product = ({ product , handleAddToCart,open,close}) => {
+
+
   return (
     <ProductsItem
       initial={{ opacity: 0, scale: 0.5 }}
@@ -33,9 +36,9 @@ const Product = ({ product , handleAddToCart}) => {
         </H2>
         <P>{product.description}</P>
       </ProductItemInfo>
-      <Button whileTap={{ scale: 0.8 }} type="button" onClick={handleAddToCart(product)}>
+      <Buton whileTap={{ scale: 0.8 }} type="button" handleAddToCart={handleAddToCart(product)} open={open} close={close}>
         Comprar
-      </Button>
+      </Buton>
     </ProductsItem>
   );
 };

@@ -12,6 +12,7 @@ import AppContext from "../../context/AppContext";
 import logo from '../../../assest/image/store.png'
 
 
+
 const Header = () => {
   const { state } = useContext(AppContext);
   const { cart } = state;
@@ -43,7 +44,9 @@ const Header = () => {
           </Badge>
         )}
       </HeaderCheckout>
+      
     </Encabezado>
+
   );
 };
 

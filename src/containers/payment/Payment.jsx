@@ -1,8 +1,9 @@
 import React, {useContext} from "react";
 import AppContext from "../../context/AppContext";
 import {Container, PaymentItem, Item, PaymentElement,H4} from './styles'
-import { PayPalButton } from "react-paypal-button-v2"
+//import { PayPalButton } from "react-paypal-button-v2"
 import { useNavigate } from "react-router-dom";
+import { ButtonSideBar } from "../checkout/styles";
 
 const Payment = () => {
   const {state , addNewOrder} = useContext(AppContext)
@@ -58,7 +59,10 @@ const Payment = () => {
           ))
         }
         <div>
-          <PayPalButton
+          <ButtonSideBar>
+            Pagar
+          </ButtonSideBar>
+          {/* <PayPalButton
            paypalOptions={paypalOptions}
           buttonStyles={buttonStyles}
           amount={handleSumTotal()}
@@ -66,7 +70,7 @@ const Payment = () => {
           onSuccess={data => handlePaymentSuccess(data)}
           onError={error => console.log(error)}
           
-          />
+          /> */}
         </div>
       </section>
     </Container>

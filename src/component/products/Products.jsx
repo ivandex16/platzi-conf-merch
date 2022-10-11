@@ -8,10 +8,21 @@ const Product = lazy(() => import('./Product'))
 const Products = () => {
   const {state, addToCart} = useContext(AppContext)
   const {products} = state
+  const [open, setOpen] = React.useState(false);
+
 
   const handleAddToCart = product => () => {
     addToCart(product)
+    setOpen(true);
   }
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+  };
 
   return (
     <div>
@@ -19,7 +30,7 @@ const Products = () => {
           <Suspense fallback={<div>Loading...</div>}>
             {
                 products.map(product => (
-                    <Product key={product.id} product={product} handleAddToCart={handleAddToCart}/>
+                    <Product key={product.id} product={product} handleAddToCart={handleAddToCart} open={open} close={handleClose}/>
                 ))
             }
             
