@@ -17,13 +17,13 @@ export default function CustomizedSnackbars({handleAddToCart,open,close}) {
 //     setOpen(true);
 //   };
 
-  const handleClose = (event, reason) => {
-    if (reason === 'clickaway') {
-      return;
-    }
+  // const handleClose = (event, reason) => {
+  //   if (reason === 'clickaway') {
+  //     return;
+  //   }
 
-    setOpen(false);
-  };
+  //   setOpen(false);
+  // };
 
   return (
     <Stack spacing={2} sx={{ width: '100%' }}>
@@ -31,7 +31,7 @@ export default function CustomizedSnackbars({handleAddToCart,open,close}) {
         Comprar
       </Button>
       <Snackbar open={open} autoHideDuration={6000} onClose={close}>
-        <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
+        <Alert onClose={close} severity="success" sx={{ width: '100%' }}>
           Producto agregado al carrito!
         </Alert>
       </Snackbar>
